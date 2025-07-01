@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Handwritten Digit Recognition with Voice</title>
+
+  <link
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style/digit.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <main class="container mt-4">
+    <div class="digit-demo-container mx-auto p-3 shadow-sm rounded">
+      <h3 class="text-center mb-3 text-white bg-dark py-3 rounded">
+        Handwritten Digit Recognition
+      </h3>
+
+      <div class="d-flex flex-wrap justify-content-center">
+        <div
+          id="canvas_box_wrapper"
+          class="canvas-box-wrapper d-flex flex-column align-items-center mb-3 mb-md-0"
+          style="max-width: 300px;"
+        >
+          <div id="canvas_box" class="canvas-box border rounded shadow"></div>
+
+          <div class="btn-group mt-3" role="group" aria-label="Canvas controls">
+            <button id="clear-button" class="btn btn-danger">
+              Clear
+            </button>
+            <button id="predict-button" class="btn btn-primary">
+              Predict
+            </button>
+          </div>
+        </div>
+
+        <div class="ml-md-4 flex-fill" style="max-width: 320px;">
+          <div
+            id="console-output"
+            class="alert alert-secondary text-center"
+            style="font-size: 1.5rem; font-weight: 600;"
+          >
+            Prediction: <span class="digit">?</span>
+          </div>
+
+          <div id="progress-bars"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+<footer id="footer" style="background:#1b263b; padding:2rem 1rem; border-radius:12px; color:#f0f4f8; text-align:center; box-shadow: 0 0 15px rgba(30,144,255,0.6); font-family:'Segoe UI', sans-serif;">
+  <h5 style="margin-bottom: 1rem; font-size: 1.2rem; color: #f8f9fa;">Get in touch</h5>
+  
+  <div style="margin-bottom: 1.2rem;">
+    <a href="mailto:metinmeki99@gmail.com" aria-label="Email" style="color:#1e90ff; margin:0 0.6rem; font-size:1.6rem;">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://www.instagram.com/metin_amedi?igsh=N3lncThuaGN4MjB3&utm_source=qr" aria-label="Instagram" style="color:#e1306c; margin:0 0.6rem; font-size:1.6rem;">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/metin-amedi-2b6b74326/" aria-label="LinkedIn" style="color:#0e76a8; margin:0 0.6rem; font-size:1.6rem;">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://www.kaggle.com/metinmekiabullrahman" aria-label="Kaggle" style="color:#20beff; margin:0 0.6rem; font-size:1.6rem;">
+      <i class="fab fa-kaggle"></i>
+    </a>
+    <a href="https://github.com/metinmeki" aria-label="GitHub" style="color:#f8f9fa; margin:0 0.6rem; font-size:1.6rem;">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
+
+  <div style="font-size: 0.9rem; color: #cdd9e5;">
+    &copy; 2025 Developed by <strong>Metin Amedi</strong>
+  </div>
+</footer>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+  <script src="js/digit-recognition.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+body {
+  background-color: #a2d2ff; /* softer sky blue */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #0a3d62; /* deep navy blue for main text */
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.digit-demo-container {
+  background-color: #1b263b; /* dark navy blue */
+  border-radius: 12px;
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.9);
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f0f4f8; /* very light gray-blue */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 5px rgba(240, 244, 248, 0.9);
+}
+
+canvas#canvas {
+  background-color: #f8f9fa; /* light gray */
+  border-radius: 12px;
+  width: 280px;
+  height: 280px;
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
+  touch-action: none;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+#progress-bars {
+  margin-top: 1.2rem;
+}
+
+.progress-wrapper {
+  margin-bottom: 0.8rem;
+}
+
+.progress-container {
+  background-color: #d0d7de; /* soft gray */
+  border-radius: 12px;
+  height: 20px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background-color: #1e90ff; /* dodger blue */
+  height: 100%;
+  border-radius: 12px 0 0 12px;
+  transition: width 0.3s ease;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #fcfdff; /* dark charcoal */
+  text-shadow: 0 0 3px rgba(250, 252, 255, 0.8);
+}
+
+#console-output {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2980b9; /* calm blue */
+  text-shadow: 0 0 6px rgba(41, 128, 185, 0.9);
+}
+
+#console-output .digit {
+  color: #1e90ff; /* brighter blue */
+}
+
+button {
+  background-color: #2980b9; /* bright blue */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 1rem auto 0 auto;
+  display: block;
+  width: 160px;
+  box-shadow: 0 4px 8px rgba(41, 128, 185, 0.7);
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #1c5ea7;
+  box-shadow: 0 6px 12px rgba(28, 94, 167, 0.9);
+}
+
+#footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #f0f4f8;
+  font-style: italic;
+  text-shadow: 0 0 5px rgba(123, 3, 3, 0.8);
+  animation: glow 3s ease-in-out infinite alternate;
+  user-select: none;
+}
+
+
+
+
+@media (max-width: 640px) {
+  .d-flex {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  canvas#canvas {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+  }
+}
